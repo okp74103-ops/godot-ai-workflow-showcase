@@ -1,0 +1,14 @@
+.DS_Store
+Thumbs.db
+
+# Godot/editor caches are intentionally excluded from the public showcase.
+.godot/
+.import/
+*.import
+*.uid
+
+# Generated and private build outputs.
+reports/private/
+tmp/
+*.zip
+*.7z
