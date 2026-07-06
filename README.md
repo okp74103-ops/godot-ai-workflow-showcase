@@ -15,13 +15,21 @@ The scanner implementation is not included.
   large manager script.
 - How a catalog-based scanner can separate generic checks, paid checks,
   adapters, and template-only checks.
+- How a local supervisor API can expose health, guards, actions, artifacts,
+  local AI recovery, and intake boundaries without exposing implementation.
+- How isolated AI output can be reviewed through an intake guardrail before any
+  base-project change is accepted.
 
 ## Repository Map
 
 ```text
 docs/
   LEAD.md
+  TOOL_ARCHITECTURE_OVERVIEW.md
+  LOCAL_SUPERVISOR_API_MAP.md
+  AI_WORKFLOW_BOUNDARIES.md
   AI_WORK_LOG_EXCERPT.md
+  AI_INTAKE_GUARDRAILS.md
   SAMPLE_SCAN_SUMMARY.md
 samples/
   game_session_signal_flow.gd
@@ -32,6 +40,16 @@ LICENSE
 README.md
 ```
 
+## Architecture Preview
+
+For a technical review, read these documents in order:
+
+1. [`docs/LEAD.md`](docs/LEAD.md) - product boundary and operating model.
+2. [`docs/TOOL_ARCHITECTURE_OVERVIEW.md`](docs/TOOL_ARCHITECTURE_OVERVIEW.md) - public layer map of the tool.
+3. [`docs/LOCAL_SUPERVISOR_API_MAP.md`](docs/LOCAL_SUPERVISOR_API_MAP.md) - supervisor APIs and review order.
+4. [`docs/AI_WORKFLOW_BOUNDARIES.md`](docs/AI_WORKFLOW_BOUNDARIES.md) - AI, local model, intake, and verification boundaries.
+5. [`docs/AI_INTAKE_GUARDRAILS.md`](docs/AI_INTAKE_GUARDRAILS.md) - isolated-output classification and acceptance gate.
+
 ## Workflow Preview
 
 ```text
@@ -40,8 +58,9 @@ README.md
 3. Read the scan summary.
 4. Inspect only the named gameplay files.
 5. Make focused code changes.
-6. Run tool checks.
-7. Record the outcome for the next AI pass.
+6. Classify any isolated AI output with docs/AI_INTAKE_GUARDRAILS.md.
+7. Run tool checks.
+8. Record the outcome for the next AI pass.
 ```
 
 ## itch.io

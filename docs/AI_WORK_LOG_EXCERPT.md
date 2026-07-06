@@ -4,6 +4,17 @@ These entries show the style of context that an AI worker can read before the
 next focused edit. The log records the goal, the changed surface, the validation
 strategy, and what remains out of scope.
 
+## AI Intake Guardrail Stabilization
+
+- Goal: safely select AI-generated improvements from isolated-copy experiments.
+- Added a read-only intake procedure for AI-only candidate review.
+- Classified results by allowed AI surfaces, blocked surfaces, required
+  evidence, acceptance states, and reject reasons.
+- Exposed the intake boundary in the supervisor view as read-only,
+  not-connected to copy output, and apply-disabled.
+- Kept distribution outputs, original projects, copied game content, and bulk
+  merge behavior out of scope.
+
 ## Inventory UI Guard Generalization
 
 - Goal: keep inventory and equipment validation reusable across Godot projects.
