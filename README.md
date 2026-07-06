@@ -15,6 +15,8 @@ The scanner implementation is not included.
   large manager script.
 - How a catalog-based scanner can separate generic checks, paid checks,
   adapters, and template-only checks.
+- How isolated AI output can be reviewed through an intake guardrail before any
+  base-project change is accepted.
 
 ## Repository Map
 
@@ -22,6 +24,7 @@ The scanner implementation is not included.
 docs/
   LEAD.md
   AI_WORK_LOG_EXCERPT.md
+  AI_INTAKE_GUARDRAILS.md
   SAMPLE_SCAN_SUMMARY.md
 samples/
   game_session_signal_flow.gd
@@ -40,8 +43,9 @@ README.md
 3. Read the scan summary.
 4. Inspect only the named gameplay files.
 5. Make focused code changes.
-6. Run tool checks.
-7. Record the outcome for the next AI pass.
+6. Classify any isolated AI output with docs/AI_INTAKE_GUARDRAILS.md.
+7. Run tool checks.
+8. Record the outcome for the next AI pass.
 ```
 
 ## itch.io
