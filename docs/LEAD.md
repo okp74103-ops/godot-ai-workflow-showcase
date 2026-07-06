@@ -23,6 +23,17 @@ project folder
   -> final tool verification
 ```
 
+For isolated AI experiments, generated output is handled as evidence first:
+
+```text
+isolated copy result
+  -> changed-file evidence
+  -> AI-only classification
+  -> blocked-surface rejection
+  -> lightweight verification plan
+  -> manual acceptance or deferral
+```
+
 The catalog separates tool groups by package and risk:
 
 | Package | Purpose |
@@ -39,6 +50,8 @@ The catalog separates tool groups by package and risk:
 - Do not assume project-specific paths exist in every Godot project.
 - Keep manager-style scripts from owning unrelated gameplay state.
 - Prefer role-boundary comments for files that define ownership.
+- Treat isolated AI output as evidence until it passes an intake guardrail.
+- Reject blocked surfaces before reviewing code quality.
 - Run tool checks before calling work complete.
 - Record the outcome so the next AI worker has context.
 
@@ -49,6 +62,7 @@ The catalog separates tool groups by package and risk:
 - Scan summary excerpts.
 - Work-log excerpts.
 - High-level catalog architecture.
+- AI intake rules and review boundaries.
 
 ## What Public Samples Must Not Include
 
@@ -58,3 +72,4 @@ The catalog separates tool groups by package and risk:
 - Personal machine paths.
 - One-off internal repair scripts.
 - Generated caches or imported engine data.
+- Distribution packages, executable outputs, or zip releases.
