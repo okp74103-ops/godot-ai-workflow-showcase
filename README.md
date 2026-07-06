@@ -15,6 +15,8 @@ The scanner implementation is not included.
   large manager script.
 - How a catalog-based scanner can separate generic checks, paid checks,
   adapters, and template-only checks.
+- How a local supervisor API can expose health, guards, actions, artifacts,
+  local AI recovery, and intake boundaries without exposing implementation.
 - How isolated AI output can be reviewed through an intake guardrail before any
   base-project change is accepted.
 
@@ -23,6 +25,9 @@ The scanner implementation is not included.
 ```text
 docs/
   LEAD.md
+  TOOL_ARCHITECTURE_OVERVIEW.md
+  LOCAL_SUPERVISOR_API_MAP.md
+  AI_WORKFLOW_BOUNDARIES.md
   AI_WORK_LOG_EXCERPT.md
   AI_INTAKE_GUARDRAILS.md
   SAMPLE_SCAN_SUMMARY.md
@@ -34,6 +39,16 @@ samples/
 LICENSE
 README.md
 ```
+
+## Architecture Preview
+
+For a technical review, read these documents in order:
+
+1. [`docs/LEAD.md`](docs/LEAD.md) - product boundary and operating model.
+2. [`docs/TOOL_ARCHITECTURE_OVERVIEW.md`](docs/TOOL_ARCHITECTURE_OVERVIEW.md) - public layer map of the tool.
+3. [`docs/LOCAL_SUPERVISOR_API_MAP.md`](docs/LOCAL_SUPERVISOR_API_MAP.md) - supervisor APIs and review order.
+4. [`docs/AI_WORKFLOW_BOUNDARIES.md`](docs/AI_WORKFLOW_BOUNDARIES.md) - AI, local model, intake, and verification boundaries.
+5. [`docs/AI_INTAKE_GUARDRAILS.md`](docs/AI_INTAKE_GUARDRAILS.md) - isolated-output classification and acceptance gate.
 
 ## Workflow Preview
 
