@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" role="img" aria-labelledby="title desc">
+  <title id="title">GodotFunctionRefactor process map</title>
+  <desc id="desc">A public overview of the local Godot code factory process from request to scan, candidate filtering, AI/fallback generation, verification, reports, and package or hub sync.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .box { fill: #ffffff; stroke: #334155; stroke-width: 2; rx: 10; }
+      .decision { fill: #fff7ed; stroke: #c2410c; stroke-width: 2; }
+      .report { fill: #ecfdf5; stroke: #047857; stroke-width: 2; rx: 10; }
+      .text { font-family: Arial, sans-serif; fill: #0f172a; font-size: 20px; font-weight: 700; }
+      .small { font-family: Arial, sans-serif; fill: #334155; font-size: 15px; }
+      .arrow { stroke: #475569; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .note { font-family: Arial, sans-serif; fill: #475569; font-size: 14px; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#475569" />
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="1200" height="660" />
+  <text x="50" y="52" class="text" font-size="30">GodotFunctionRefactor Public Workflow</text>
+  <text x="50" y="80" class="note">Shows process and report evidence without publishing private scanner code, prompts, binaries, or project source.</text>
+
+  <rect class="box" x="50" y="120" width="210" height="92" />
+  <text class="text" x="75" y="155">1. Request</text>
+  <text class="small" x="75" y="184">User goal and target</text>
+
+  <rect class="box" x="310" y="120" width="210" height="92" />
+  <text class="text" x="335" y="155">2. Scan</text>
+  <text class="small" x="335" y="184">Scripts, functions, links</text>
+
+  <rect class="box" x="570" y="120" width="250" height="92" />
+  <text class="text" x="595" y="155">3. Candidate Filter</text>
+  <text class="small" x="595" y="184">Memory, cooldown, rules</text>
+
+  <rect class="decision" x="870" y="108" width="250" height="116" rx="10" />
+  <text class="text" x="895" y="150">4. Agent Brain</text>
+  <text class="small" x="895" y="180">Select, skip, or retry</text>
+  <text class="small" x="895" y="202">with recorded reasons</text>
+
+  <rect class="decision" x="310" y="300" width="250" height="116" rx="10" />
+  <text class="text" x="335" y="342">5. AI Or Fallback</text>
+  <text class="small" x="335" y="372">Model failure and contract</text>
+  <text class="small" x="335" y="394">failure are separated</text>
+
+  <rect class="box" x="610" y="300" width="230" height="116" />
+  <text class="text" x="635" y="342">6. Generate</text>
+  <text class="small" x="635" y="372">Patch, no-op report,</text>
+  <text class="small" x="635" y="394">or checker plan</text>
+
+  <rect class="decision" x="890" y="300" width="230" height="116" rx="10" />
+  <text class="text" x="915" y="342">7. Verify</text>
+  <text class="small" x="915" y="372">Pass, fail, rollback,</text>
+  <text class="small" x="915" y="394">or quarantine</text>
+
+  <rect class="report" x="300" y="500" width="250" height="102" />
+  <text class="text" x="325" y="538">Reports</text>
+  <text class="small" x="325" y="568">Filter, brain, journal,</text>
+  <text class="small" x="325" y="590">quick verify, self-test</text>
+
+  <rect class="report" x="650" y="500" width="280" height="102" />
+  <text class="text" x="675" y="538">Package / Hub Sync</text>
+  <text class="small" x="675" y="568">Only after gates pass</text>
+  <text class="small" x="675" y="590">and drift is cleared</text>
+
+  <path class="arrow" d="M260 166 H310" />
+  <path class="arrow" d="M520 166 H570" />
+  <path class="arrow" d="M820 166 H870" />
+  <path class="arrow" d="M995 224 C995 260 435 260 435 300" />
+  <path class="arrow" d="M560 358 H610" />
+  <path class="arrow" d="M840 358 H890" />
+  <path class="arrow" d="M1005 416 C1005 470 790 470 790 500" />
+  <path class="arrow" d="M1005 416 C1005 470 425 470 425 500" />
+  <path class="arrow" d="M890 358 C840 250 995 250 995 224" />
+</svg>
